@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+<_name>Eye creator</_name>
+<id>com.KaTaai.Overlapping_circles_eye</id>
+<dependency type="executable" location="extensions">Eye_gui.py</dependency>
+<dependency type="executable" location="extensions">inkex.py</dependency>
+<param name="d-main" type="float" precision="3" min="0.001" max="10000.000" _gui-text="Diameter main circle">25.000</param>
+<param name="iris-width" type="float" precision="3" min="0.001" max="10000.000" _gui-text="Width of the iris">5.000</param>
+<param name="stroke-w-main" type="float" precision="3" min="0.001" max="1000.000" _gui-text="Stroke width main circle">0.500</param>
+<param name="stroke-w-eye" type="float" precision="3" min="0.001" max="1000.000" _gui-text="Stroke width eye circles">0.500</param>
+<param name="angle" type="float" precision="3" min="0.000" max="360.000" _gui-text="Clockwise rotation of figure (degrees)">0.000</param>
+<param name="offset" type="float" precision="3" min="-10000.000" max="10000.000" _gui-text="Horizontal offset of the iris (smaller than radius main circle)">0.000</param>
+<param name="shape" type="optiongroup" appearance="radio" gui-text="Shape of the iris">
+    <option value="Lens">Lens</option>
+    <option value="Crescent">Crescent</option>
+</param>
+<param name="crescent-factor" type="float" precision="3" min="0.001" max="0.999" _gui-text="Factor of crescent width (default 0.5)">0.500</param>
+<effect>
+    <object-type>all</object-type>
+    <effects-menu>
+        <submenu _name="KaTaai"/>
+    </effects-menu>
+</effect>
+<script>
+    <command reldir="extensions" interpreter="python">Eye_gui.py</command>
+</script>
+</inkscape-extension>
