@@ -1,0 +1,6 @@
+# VS Code files
+.vscode
+*.code-workspace
+
+# Environments
+InkscapeVenv/
